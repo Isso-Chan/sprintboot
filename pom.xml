@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.project.sprintboot</groupId>
+    <artifactId>Sprintboot</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>15</maven.compiler.source>
+        <maven.compiler.target>15</maven.compiler.target>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <parent>
+        <!--This is parent project definition. There can be more different project in each other
+        Decide which versions of JARs will be used automatically-->
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.4.2.RELEASE</version>
+    </parent>
+
+    <dependencies>
+        <dependency>
+            <!--To reduce the number of manually added dependencies like Spring MVC (Model View Controller),
+            Tomcat and Jackson. Just add one starter-->
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <!--Spring Test, JUnit, Hamcrest, and Mockito libraries are added automatically by following dependency.
+            No need to specify the version number of an artifact. Spring Boot will figure out what version to use
+            – all we need to specify is the version of spring-boot-starter-parent artifact-->
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+</project>
